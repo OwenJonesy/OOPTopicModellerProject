@@ -1,0 +1,71 @@
+Title: Topic Modeler
+
+Description: This program creates a tool which detects how likely a set of documents are "about" the same topic. It will
+analyse the words in each document and keep track of how often they occur. A document of stop words is used along side this
+to remove any un needed words which could skew the result. A Grade is calculated based on the common words in the document
+and a percentage of likelihood is given. The user has the ability to choose the documents for comparison, display the words,
+run the program and clear the text area on a GUI. 
+
+Classes:
+
+Control:
+Contains the main method which holds the stop words document to be read and calls teh SimpleScreen class.
+
+SimpleScreen:
+This class creates a GUI which contains multiple panels and 4 buttons. The first button "Run" Allows the user to run the modeler
+once two valid documents have been selected. Button 2 allows the user to display the text file names that were chosen and the most
+common words between the documents. The third button allows the user to select which 2 files to compare, with error checking to make
+sure the file is a valid text file and is within the project folder. The fourth button clears the textarea. The class also contains
+the designs for the GUI such as text colour, images, background colour and where each component lies on the GUI.
+
+TopicModeler: 
+This class analyses two input documents to determine how likely they are to be about the same topic. it analyses the words in each
+document and creates a list of the common words excluding the words contained in the stopwords file. it calculates the overlap
+between words in the documents and creates a likelihood percentage doing this.
+
+readStrings:
+Reads the stop words, setting each word to lower case, splitting each line into words.
+
+Core functionality:
+Created list of stop words to ignore when comparing
+Created a percentage based on overlap
+Created a GUI for user to run program
+
+Optional:
+Made stop words a file that is read in rather than a list of words
+User can physically choose a file to be read in rather than on console
+Display feature to show which file is being compared and their most common words
+Extra GUI features for a nicer look
+
+
+If i had more time:
+1.
+I would Allow users to input their own stopword list: Instead of using a pre-defined stopword list,
+users could have the option to input their own stopword list, which would allow for more customization.
+ 
+2.
+Display word frequency counts: Instead of just displaying the most common words,
+I could display the frequency counts for each word in the selected files. This could give users a better
+understanding of the distribution of words in each file.
+  
+3.
+Add a visualization feature: I could add a visualization feature that displays the most common words as
+a word cloud or a bar graph. This would make it easier for users to quickly see the most common words and
+their relative frequencies.
+  
+4.
+Implement more advanced algorithms.
+
+5.
+Allow users to compare more than two files: Instead of just comparing two files, I could allow users
+to select multiple files and compare them to each other. This would allow for more comprehensive topic modeling analysis.
+ 
+6.	
+Enable users to select the number of common words to display: Instead of dis-playing all the common words, 
+users could have the option to select how many common words they want to display. This could be useful if they only want 
+to focus on the most significant words.
+
+7.	
+Provide a summary of the results: I could provide a summary of the topic modeling results, including the percentage of 
+common words, the most common words, and any patterns or trends that were observed in the selected files. This would give users
+a better understanding of the topic modeling analysis.
